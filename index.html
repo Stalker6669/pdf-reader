@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт для просмотра PDF файлов</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+  <h2>PDF Книга</h2>
+
+  <div id="controls">
+    <input type="file" id="upload" accept="application/pdf">
+    <button onclick="prevPage()">⬅ Назад</button>
+    <button onclick="nextPage()">Вперёд ➡</button>
+    <input type="number" id="page-input" min="1" value="1">
+    <button onclick="goToPage()">Перейти</button>
+  </div>
+
+  <div id="viewer">
+    <div class="canvas-wrepper" id="canvasWrapper">
+      <canvas id="pdf-canvas"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
